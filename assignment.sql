@@ -72,6 +72,7 @@ select category,count(category)as section,sum(price) as totalpice,min(price) as 
 select* from products;
 select category as header,sum(price) as totalprice,count(category) as count from products group by category having count(category)>=3;
 select category,count(*),sum(price) from products group by category having sum(price)>5000;
+select category,count(*),avg(price) from products group by category having sum(price)>5000;
 savepoint sp2;
 commit;
 
